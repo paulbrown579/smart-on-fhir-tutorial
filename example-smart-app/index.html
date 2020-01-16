@@ -66,9 +66,7 @@
         </tr>
       </table>
       <h2>Patient Data Structure</h2>
-      <div id="patient_data">
-
-      </div>
+      <pre id="patient_data"></pre>
     </div>
     <!-- Required JS files to enable this page to embed within an MPage -->
     <!--
@@ -93,7 +91,7 @@
         function(p) {
 
           //display contents of p to the user
-          document.getElementById('patient_data').innerHTML = p.stringify();
+          document.getElementById('patient_data').innerHTML = JSON.stringify(p, undefined, 2);
 
           drawVisualization(p);
         },
