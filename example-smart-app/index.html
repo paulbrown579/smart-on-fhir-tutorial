@@ -93,7 +93,7 @@
         function(p) {
 
           //display contents of p to the user
-          document.getElementById('patient_data').innerHTML = p;
+          document.getElementById('patient_data').innerHTML = p.stringify();
 
           drawVisualization(p);
         },
