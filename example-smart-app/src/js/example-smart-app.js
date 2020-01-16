@@ -60,6 +60,9 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
+          //display contents of p to the user
+          document.getElementById('patient_data').innerHTML = JSON.stringify(patient, undefined, 2);
+
           ret.resolve(p);
         });
       } else {

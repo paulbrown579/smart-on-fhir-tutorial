@@ -89,10 +89,6 @@
       extractData().then(
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
-
-          //display contents of p to the user
-          document.getElementById('patient_data').innerHTML = JSON.stringify(p, undefined, 2);
-
           drawVisualization(p);
         },
 
