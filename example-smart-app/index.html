@@ -20,7 +20,7 @@
       <div class="bounce3"></div>
     </div>
     <div id='holder' >
-      <h2>Example-SMART-App</h2>
+      <h2>iMed SMART on FHIR Test App</h2>
 
       <h2>Patient Resource</h2>
       <table>
@@ -65,6 +65,10 @@
           <td id='hdl'></td>
         </tr>
       </table>
+      <h2>Patient Data Structure</h2>
+      <div id="patient_data">
+
+      </div>
     </div>
     <!-- Required JS files to enable this page to embed within an MPage -->
     <!--
@@ -87,6 +91,10 @@
       extractData().then(
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
+
+          //display contents of p to the user
+          document.getElementById('patient_data').innerHTML = p;
+
           drawVisualization(p);
         },
 
